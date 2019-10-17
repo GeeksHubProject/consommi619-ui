@@ -1,0 +1,11 @@
+.nav{
+    background-color: red;
+    height: 4em;
+    padding-right: 5em; 
+}
+
+.nav-link{
+    padding-top: 1em;
+    color: white;
+    margin-left: 3em;
+}

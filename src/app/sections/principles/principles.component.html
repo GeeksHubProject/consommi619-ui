@@ -1,0 +1,12 @@
+<div>
+    
+    <h3 class="section_title"> {{ section_title }} </h3>
+    <div class="row grey-section">
+        <mat-card *ngFor="let principle of principles" class="col-3" style="margin-left:25px;margin-right:25px">
+            <h4 style="font-size:80%; text-align: right;"> {{ principle.title }}</h4> 
+            <br>
+            <p style="font-size:80%"> {{ principle.description }}</p>
+        </mat-card>
+    </div>
+</div>
+    

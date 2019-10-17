@@ -1,0 +1,15 @@
+
+
+.signees{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+}
+
+.signee-picture{
+    width:60px; 
+    border-radius: 50%; 
+    display: inline;
+    margin: 2px;
+}
