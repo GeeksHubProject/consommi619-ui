@@ -1,7 +1,7 @@
 
-<div class="signees">
+<div *ngIf="users" class="signees">
     <h3 class="section_title"> {{ section_title }} </h3>
     <div> 
-        <img *ngFor="let user of users" class="signee-picture" src="{{user.picture}}"/>  
+        <img *ngFor="let user of users" title="{{user.firstname}}" class="signee-picture" src="{{user.photo_url}}"/>  
     </div>
 </div>

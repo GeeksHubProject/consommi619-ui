@@ -1,0 +1,49 @@
+<form [formGroup]="contribute_form"  (ngSubmit)="onSubmit()" class="sing-form">
+    <table  style="width:100%;">
+       <tr>
+          <td style="text-align:left"> Nom <span style="color:red"> * </span> </td>
+          <td> <input class="form-control" formControlName="firstname" name="name" type="text"/> <small style="color:red" *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"> le nom doit comporter plus de 3 caractères </small> </td>
+          <td style="text-align:right"> الإسم</td>
+       </tr>
+       <tr>
+          <td style="text-align:left"> Prénom <span style="color:red"> * </span></td>
+          <td> <input  class="form-control" formControlName="lastname" name="lastname" type="text"/> <small style="color:red" *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"> le prénom doit comporter plus de 3 caractères </small> </td>
+          <td style="text-align:right"> اللقب</td>
+       </tr>
+       <tr>
+          <td style="text-align:left" > email <span style="color:red"> * </span></td>
+          <td> <input  class="form-control" placeholder="johndoe@mail.com" formControlName="email" name="email" type="email"/>  <small style="color:red" *ngIf="email.invalid && (email.dirty || email.touched)"> L'adresse mail est invalide </small></td>
+          <td style="text-align:right"> البريد الإلكتروني  </td>
+       </tr>
+       <tr>
+            <td style="text-align:left" > Télephone  </td>
+            <td> <input  class="form-control" formControlName="phone" name="phone" type="text"/>  <small style="color:red" *ngIf="phone.invalid && (phone.dirty || phone.touched)"> L'adresse mail est invalide </small></td>
+            <td style="text-align:right"> البريد الإلكتروني  </td>
+         </tr>
+       <tr>
+        <td style="text-align:left" > Motivation <span style="color:red"> * </span></td>
+        <td> 
+            <textarea class="form-control" formControlName="motivation" name="motivation">
+            </textarea>  
+            <small style="color: grey; float: right">  {{ motivation.value.length }}/1000 </small>
+            <small style="color:red" *ngIf="motivation.invalid && (motivation.dirty || motivation.touched)"> La motivation doit comporter au moins 100 caractères </small>
+        </td>
+        <td style="text-align:right"> دوافع المشاركة  </td>
+       </tr>
+       <tr>
+        <td style="text-align:left" > Expertise <span style="color:red"> * </span></td>
+        <td> 
+            <textarea class="form-control" formControlName="expertise" name="expertise"> </textarea> 
+            <small style="color: grey; float: right">  {{ expertise.value.length }}/500 </small>
+            <small style="color:red" *ngIf="expertise.invalid && (expertise.dirty || expertise.touched)"> La description des compétences doit comporter au moins 20 caractères  </small></td>
+        <td style="text-align:right"> دوافع المشاركة  </td>
+       </tr>
+       <tr>
+          <td></td>
+          <td><button [disabled]="!contribute_form.valid" style="background-color:red; border: 4px white solid; color:white"> شارك </button></td>
+          <td></td>
+       </tr>
+    </table>
+       
+    
+ </form>

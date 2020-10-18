@@ -1,0 +1,38 @@
+<mat-card style="margin:4em;">
+   <h3 style="text-align:center"> شاركنا الفكرة ؟  </h3>
+   <fb-like url="http://127.0.0.1:4200/sign"></fb-like>
+   <button class="fb-login" (click)="login($event)"> Sign in with Facebook </button> 
+   <hr>
+   <small style="text-align: right !important"> <a href="/sign"  style="color: red" (click)="toggleForm($event)"> لا أريد إستخدام فيسبوك للتوقيع    </a></small>
+   <form [formGroup]="signee" *ngIf="noFacebook"  (ngSubmit)="onSubmit()" class="sing-form">
+      <table  style="width:100%;">
+         <tr>
+            <td style="text-align:left"> Nom </td>
+            <td> <input formControlName="firstname" name="name" type="text"/> <small style="color:red" *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"> le nom doit comporter plus de 3 caractères </small> </td>
+            <td style="text-align:right"> الإسم</td>
+         </tr>
+         <tr>
+            <td style="text-align:left"> Prénom </td>
+            <td> <input formControlName="lastname" name="lastname" type="text"/> <small style="color:red" *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"> error </small> </td>
+            <td style="text-align:right"> اللقب</td>
+         </tr>
+         <tr>
+            <td style="text-align:left" > email </td>
+            <td> <input formControlName="email" name="email" type="email"/>  <small style="color:red" *ngIf="email.invalid && (email.dirty || email.touched)"> error </small></td>
+            <td style="text-align:right"> البريد الإلكتروني  </td>
+         </tr>
+         <tr>
+            <td colspan="3"> <small style="color:grey"> "بتوقيعك للميثاق، تقبل تلقي أخبار فريق تنظيم حملة "إستهلك تونسي   </small></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td><button style="background-color:red; border: 4px white solid; color:white"> توقيع </button></td>
+            <td></td>
+         </tr>
+      </table>
+         
+      
+   </form>
+   
+</mat-card>
+

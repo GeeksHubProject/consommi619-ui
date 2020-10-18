@@ -11,8 +11,13 @@ export class SigneesComponent implements OnInit {
     private users; 
     private section_title = 'هوما يستهلكوا تونسي وإنت ؟'
      constructor(private users_service: UsersService, private fbService: FacebookService){
-        this.users = this.users_service.getUsers(); 
-        console.log(this.users)
+        this.users_service.getUsers().then((res) => {
+            //console.log(res)
+            this.users = res; 
+        })
+        .catch(error => {
+            //console.log(error)
+        }); 
      }
 
      login(){

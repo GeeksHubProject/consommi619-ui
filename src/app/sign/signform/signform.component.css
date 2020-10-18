@@ -1,0 +1,18 @@
+.fb-login{
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    padding: 5px;
+    display: block;
+    margin: 40px auto 10px auto;
+    margin-right: auto;
+}
+
+.sing-form{
+    text-align: right;
+    width: 100%;
+}
+
+td{
+    padding: 5px;  
+}
